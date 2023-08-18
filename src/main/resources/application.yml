@@ -11,3 +11,18 @@ spring:
     url: jdbc:mysql://localhost:3306/test
     username: root
     password: root
+  graalvm:
+    build-time-properties:
+      spring:
+        native:
+          remove-yaml-support: false
+          remove-xml-support: false
+          remove-spel-support: false
+          remove-jmx-support: false
+          remove-jdbc-support: false
+          remove-naming-support: false
+          remove-jaxb-support: false
+          verbose: true
+          mode: mode
+        aop:
+          proxyTargetClass: true
